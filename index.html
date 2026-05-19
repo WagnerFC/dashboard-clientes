@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Clientes</title>
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Barra Lateral / Header -->
+        <header class="dashboard-header">
+            <h1>Painel de Controle</h1>
+            <button id="theme-toggle" class="btn-theme">Alternar Tema</button>
+        </header>
+
+        <!-- Conteúdo Principal -->
+        <main class="main-content">
+        
+        <!-- Insira este bloco logo após a abertura da tag <main class="main-content"> -->
+<section class="stats-container">
+    <div class="card-stat">
+        <h3>Total de Usuários</h3>
+        <p id="stat-total">0</p>
+    </div>
+    <div class="card-stat stat-active">
+        <h3>Ativos</h3>
+        <p id="stat-active">0</p>
+    </div>
+    <div class="card-stat stat-inactive">
+        <h3>Inativos</h3>
+        <p id="stat-inactive">0</p>
+    </div>
+</section>
+    
+        <!-- Insira este bloco logo após a abertura da tag <main class="main-content"> -->
+<section class="form-container">
+    <h2>Cadastrar Novo Usuário</h2>
+
+    <form id="user-form">
+        <div class="form-group">
+            <input type="text" id="new-name" placeholder="Nome completo" required>
+        </div>
+        <div class="form-group">
+            <input type="email" id="new-email" placeholder="E-mail" required>
+        </div>
+        <button type="submit" class="btn-submit">Adicionar Usuário</button>
+    </form>
+</section>
+
+            <div class="table-actions">
+                <input type="text" id="search-input" placeholder="Buscar usuário por nome...">
+                <!-- Localize o bloco da class="table-actions" e adicione o botão ao lado do input -->
+                <button id="btn-export" class="btn-export">Exportar CSV</button>
+            </div>
+
+            <div class="table-container">
+                <table id="users-table">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>E-mail</th>
+                            <th>Status</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="user-rows">
+                        <!-- As linhas serão inseridas aqui dinamicamente pelo JavaScript -->
+
+                        <!-- Os 10 usuários fictícios
+                        <tr>
+                            <td>Ana Silva</td>
+                            <td>ana.silva@example.com</td>
+                            <td><span class="badge active">Ativo</span></td>
+                            <td><button class="btn-toggle">Alterar</button></td>
+                        </tr>
+                        <tr>
+                            <td>Bruno Santos</td>
+                            <td>bruno.santos@example.com</td>
+                            <td><span class="badge active">Ativo</span></td>
+                            <td><button class="btn-toggle">Alterar</button></td>
+                        </tr>
+                        <tr>
+                            <td>Carla Oliveira</td>
+                            <td>carla.oliveira@example.com</td>
+                            <td><span class="badge active">Ativo</span></td>
+                            <td><button class="btn-toggle">Alterar</button></td>
+                        </tr>
+                        <tr>
+                            <td>Diego Costa</td>
+                            <td>diego.costa@example.com</td>
+                            <td><span class="badge inactive">Inativo</span></td>
+                            <td><button class="btn-toggle">Alterar</button></td>
+                        </tr>
+                        <tr>
+                            <td>Elena Rodrigues</td>
+                            <td>elena.rodrigues@example.com</td>
+                            <td><span class="badge active">Ativo</span></td>
+                            <td><button class="btn-toggle">Alterar</button></td>
+                        </tr>
+                        <tr>
+                            <td>Fabio Almeida</td>
+                            <td>fabio.almeida@example.com</td>
+                            <td><span class="badge active">Ativo</span></td>
+                            <td><button class="btn-toggle">Alterar</button></td>
+                        </tr>
+                        <tr>
+                            <td>Gabriela Lima</td>
+                            <td>gabriela.lima@example.com</td>
+                            <td><span class="badge inactive">Inativo</span></td>
+                            <td><button class="btn-toggle">Alterar</button></td>
+                        </tr>
+                        <tr>
+                            <td>Henrique Souza</td>
+                            <td>henrique.souza@example.com</td>
+                            <td><span class="badge active">Ativo</span></td>
+                            <td><button class="btn-toggle">Alterar</button></td>
+                        </tr>
+                        <tr>
+                            <td>Isabela Ribeiro</td>
+                            <td>isabela.ribeiro@example.com</td>
+                            <td><span class="badge active">Ativo</span></td>
+                            <td><button class="btn-toggle">Alterar</button></td>
+                        </tr>
+                        <tr>
+                            <td>Joao Carvalho</td>
+                            <td>joao.carvalho@example.com</td>
+                            <td><span class="badge inactive">Inativo</span></td>
+                            <td><button class="btn-toggle">Alterar</button></td>
+                        </tr> -->
+                    </tbody>
+                </table>
+                <!-- Procure o fechamento da tag </table> e cole este bloco logo abaixo -->
+                <div class="pagination-container">
+                    <button id="btn-prev" class="btn-page">Anterior</button>
+                    <span id="page-indicator">Página 1 de 1</span>
+                    <button id="btn-next" class="btn-page">Próximo</button>
+                </div>
+
+            </div>
+        </main>
+    </div>
+        <!-- Vincule o arquivo JavaScript aqui -->
+    <script src="src/js/script.js"></script>
+</body>
+</html>
